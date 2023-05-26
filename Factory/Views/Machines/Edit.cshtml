@@ -16,7 +16,10 @@
     @Html.EditorFor(model => model.Type)
 
     @Html.LabelFor(model => model.Status)
-    @Html.TextBoxFor(model => model.Status)   
+    @Html.TextBoxFor(model => model.Status) 
+
+    @Html.LabelFor(model => model.InspectionDate)
+    @Html.TextBoxFor(model => model.InspectionDate, new { type = "date" })  
 
     <input type="submit" value="Save" />
 }

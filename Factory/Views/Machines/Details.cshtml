@@ -7,7 +7,9 @@
 
 <h2>Machine Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type) | @Html.DisplayNameFor(model => model.Status): @Html.DisplayFor(model => model.Status)</h3>
+<h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3> 
+<h3>@Html.DisplayNameFor(model => model.Status): @Html.DisplayFor(model => model.Status)</h3>
+<h3>@Html.DisplayNameFor(model => model.InspectionDate): @Html.DisplayFor(model => model.InspectionDate)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
@@ -19,7 +21,7 @@ else
   <ul>
   @foreach(EngineerMachine join in Model.JoinEntities)
   {
-    <li>@join.Engineer.Name | Idle: @join.Engineer.IsIdle</li>
+    <li>@join.Engineer.Name | Idle: @join.Engineer.IsIdle | LicenseDate: @join.Engineer.LicenseDate</li>
 
     @using (Html.BeginForm("DeleteJoin", "Machines"))
     {

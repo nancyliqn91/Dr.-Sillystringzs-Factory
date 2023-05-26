@@ -13,7 +13,7 @@
 
 @foreach (Engineer engineer in Model)
 {
-  <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId }) | IsIdle: @engineer.IsIdle</li>
+  <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId }) | IsIdle: @engineer.IsIdle | LicenseDate: @engineer.LicenseDate</li>
 }
 
 <p>@Html.ActionLink("Add new engineer", "Create")</p>

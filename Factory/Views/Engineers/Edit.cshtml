@@ -20,6 +20,9 @@
     @Html.LabelFor(model => model.IsIdle) 
     @Html.CheckBoxFor(model => model.IsIdle)
 
+    @Html.LabelFor(model => model.LicenseDate)
+    @Html.TextBoxFor(model => model.LicenseDate, new { type = "date" })
+
     <input type="submit" value="Save" />
 }
 

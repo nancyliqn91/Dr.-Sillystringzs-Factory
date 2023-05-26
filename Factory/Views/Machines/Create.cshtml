@@ -8,6 +8,7 @@
 
 <p>@Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
 <p>@Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+<p>@Html.ValidationMessageFor(model => model.InspectionDate, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
 
 @using (Html.BeginForm())
 {
@@ -16,6 +17,9 @@
 
     @Html.LabelFor(model => model.Status)
     @Html.TextBoxFor(model => model.Status)
+
+    @Html.LabelFor(model => model.InspectionDate)
+    @Html.TextBoxFor(model => model.InspectionDate, new { type = "date" })
 
     <input type="submit" value="Add new machine" class="btn btn-primary" />
 }
