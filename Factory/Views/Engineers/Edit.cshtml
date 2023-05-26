@@ -17,6 +17,9 @@
     @Html.LabelFor(model => model.Name)
     @Html.EditorFor(model => model.Name)
 
+    @Html.LabelFor(model => model.IsIdle) 
+    @Html.CheckBoxFor(model => model.IsIdle)
+
     <input type="submit" value="Save" />
 }
 

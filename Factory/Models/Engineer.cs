@@ -10,6 +10,7 @@ namespace Factory.Models
 
     [Required(ErrorMessage = "The engineer's name can't be empty!")]
     public string Name { get; set; }
+    public bool IsIdle { get; set; } = false;
     
     public List<EngineerMachine> JoinEntities { get;}
   }

@@ -34,6 +34,7 @@ namespace Factory.Controllers
       if(!ModelState.IsValid)
       {
         ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Type");
+        ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Status");
         return View(machine);
       }
       else
