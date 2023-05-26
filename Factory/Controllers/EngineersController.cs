@@ -52,7 +52,7 @@ namespace Factory.Controllers
     public ActionResult Edit(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-      return View(thisItem);
+      return View(thisEngineer);
     }
 
     [HttpPost]
