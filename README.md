@@ -16,7 +16,10 @@
 
 ## Description
 
-* The factory manager should be able to keep track of the factory's machine repairs, manage their engineers, and the machines they are licensed to fix. 
+* The factory manager should be able to keep track of the factory's machine repairs, manage their engineers and the machines they are licensed to fix. 
+* The factory manager should be able to see engineers' status, like whether idle or not; and the status of the machine, like is operational or not.
+* The factory manager should be able to track inspection dates to the machines and license renewal to the engineers.
+* The factory manager should be able to see a table for incidents, showing which engineer repaired which machine.
 
 
 ## Setup/Installation Requirements

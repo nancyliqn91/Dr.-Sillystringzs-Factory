@@ -44,7 +44,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (EngineerMachine join in Model.JoinEntities)
+        @foreach (EngineerMachine join in Model["joinEntities"])
         {
             <tr>
                 <td>@join.Machine.Type</td>

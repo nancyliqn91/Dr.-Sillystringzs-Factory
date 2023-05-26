@@ -20,10 +20,12 @@ namespace Factory.Controllers
       {
         Machine[] machines = _db.Machines.ToArray();
         Engineer[] engineers = _db.Engineers.ToArray();
+        EngineerMachine[] joinEntities = _db.EngineerMachines.ToArray();
 
         Dictionary<string,object[]> model = new Dictionary<string, object[]>();
         model.Add("engineers", engineers);
         model.Add("machines", machines);
+        model.Add("joinEntities", joinEntities);
 
         return View(model);
       }      
