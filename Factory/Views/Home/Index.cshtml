@@ -30,5 +30,28 @@
     <li>@Html.ActionLink(@machine.Type, "Details", "Machines", new { id = @machine.MachineId})</li>
   }
 </ul>
-
 <hr>
+
+<h2>Incidents</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Machine Type</th>
+            <th>Machine Status</th>
+            <th>Machine InspectionDate</th>
+            <th>Engineer Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (EngineerMachine join in Model.JoinEntities)
+        {
+            <tr>
+                <td>@join.Machine.Type</td>
+                <td>@join.Machine.Status</td>
+                <td>@join.Machine.InspectionDate</td>
+                <td>@join.Engineer.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
