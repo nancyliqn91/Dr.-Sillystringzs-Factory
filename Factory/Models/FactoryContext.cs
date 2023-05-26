@@ -8,6 +8,6 @@ namespace Factory.Models
     public DbSet<Engineer> Engineers { get; set; }
     public DbSet<EngineerMachine> EngineerMachines { get; set; }
     
-    public ToDoListContext(DbContextOptions options) : base(options) { }
+    public FactoryContext(DbContextOptions options) : base(options) { }
   }
 }
